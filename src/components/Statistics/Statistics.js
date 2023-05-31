@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Statistics = ({stats}) => {
-    console.log({stats});    
+export class Statistics extends Component {
+  render() {
+    const { good, neutral, bad, total, positivePercentage } = this.props;
     return (
-                        <ul>
-                            <li>Good: {stats.good}</li>
-                            <li>Neutral: {stats.neutral}</li>
-                            <li>Bad: {stats.bad}</li>
-                            <li>Total: </li>
-                            <li>Positive feedback: ТУТ МОЖЕ БУТИ ВАША ФУНКЦІЯ</li>
-                        </ul>
-                );
-    }
-
- 
-
-export default Statistics;
+      <div>
+        <p>Good: {good}</p>
+        <p>Neutral: {neutral}</p>
+        <p>Bad: {bad}</p>
+        <p>Total: {total}</p>
+        <p>Positive Feedback: {positivePercentage}%</p>
+      </div>
+    );
+  }
+}
