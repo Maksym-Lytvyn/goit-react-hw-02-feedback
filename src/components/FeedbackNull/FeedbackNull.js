@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class FeedbackNull extends Component {
   render() {
@@ -10,3 +11,6 @@ export class FeedbackNull extends Component {
     );
   }
 }
+FeedbackNull.propTypes = {
+  message: PropTypes.string.isRequired,
+};

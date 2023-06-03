@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class FeedbackOptions extends Component {
   render() {
@@ -14,3 +15,7 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
